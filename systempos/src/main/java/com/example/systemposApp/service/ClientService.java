@@ -13,6 +13,6 @@ public interface ClientService {
 	
 	public Client updateClient(Client client) throws Exception;
 	
-	public void deleteUser(Long id) throws UsernameOrldNotFound;
+	public void deleteClient(Long id) throws UsernameOrldNotFound;
 	
 }

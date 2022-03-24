@@ -1,0 +1,24 @@
+
+<form  autocomplete="off"  th:object="${Client}" th:action="@{clientForm}" method="post">
+                    <h4>Ingrese informacion de nuevo cliente</h4>
+                    <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.name}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Documento</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.document}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Direccion</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.address}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Numero de telefono</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.phone}" th:disabled="${disableFields}">
+					</div>
+					<label></label>
+					<div class="form-group row"><div class="col-lg-12 text-center">
+                    <input type="submit" class="btn btn-primary" value="Registrar">
+					</div></div>
+</form>

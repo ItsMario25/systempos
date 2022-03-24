@@ -1,0 +1,48 @@
+<div class="bib">
+<form  autocomplete="off"  th:object="${Client}" th:action="@{clientForm}" method="post">
+                    <h4>Ingrese informacion de nuevo cliente</h4>
+                    <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.name}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Documento</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.document}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Direccion</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.address}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Numero de telefono</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${clientForm.phone}" th:disabled="${disableFields}">
+					</div>
+					<label></label>
+					<div class="form-group row"><div class="col-lg-12 text-center">
+                    <input type="submit" class="btn btn-primary" value="Registrar">
+					</div></div>
+</form>
+</div>
+<div class="mfref">          
+<table id="clientList" class="table table-bordered table-hover table-striped">
+						<thead class="thead-light">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Documento</th>
+							<th scope="col">Nombre</th>
+							<th scope="col">Direccion</th>
+							<th scope="col">Numero telefonico</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr th:each="client: ${clientList}">
+							<td th:text="${client.id}"></td>
+							<td th:text="${client.name}"></td>
+							<td th:text="${client.document}"></td>
+							<td th:text="${client.address}"></td>
+							<td th:text="${client.phone}"></td>
+						</tr>
+						</tbody>
+</table>
+</div>

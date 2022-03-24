@@ -32,7 +32,7 @@ public class ClientServiceImpl implements ClientService {
 
 	@Override
 	public Client getClientById(Long id) throws UsernameOrldNotFound {
-		return repository.findById(id).orElseThrow(() -> new UsernameOrldNotFound("El Id del usuario no existe."));
+		return repository.findById(id).orElseThrow(() -> new UsernameOrldNotFound("El Id del cliente no existe."));
 	}
 
 	@Override
@@ -46,12 +46,11 @@ public class ClientServiceImpl implements ClientService {
 		to.setDocument(from.getDocument());
 		to.setAddress(from.getAddress());
 		to.setPhone(from.getPhone());
-		to.setIduser(from.getIduser());
 	}
 
 	@Override
 	@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-	public void deleteUser(Long id) throws UsernameOrldNotFound {
+	public void deleteClient(Long id) throws UsernameOrldNotFound {
 		Client client = getClientById(id);
 		repository.delete(client);
 	}

@@ -18,6 +18,9 @@ public class Client {
 	
 	@Column
 	@NotBlank
+	private String name;
+	@Column
+	@NotBlank
 	private String document;
 	@Column
 	@NotBlank
@@ -25,10 +28,6 @@ public class Client {
 	@Column
 	@NotBlank
 	private String phone;
-	
-	@Column
-	@NotBlank
-	private String iduser;
 
 	public Long getId() {
 		return id;
@@ -62,11 +61,11 @@ public class Client {
 		this.phone = phone;
 	}
 
-	public String getIduser() {
-		return iduser;
+	public String getName() {
+		return name;
 	}
 
-	public void setIduser(String iduser) {
-		this.iduser = iduser;
+	public void setName(String name) {
+		this.name = name;
 	}
 }
