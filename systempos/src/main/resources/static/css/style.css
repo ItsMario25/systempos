@@ -4,6 +4,67 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ 
+ .content {
+	margin-top: 2rem;
+}
+
+[data-content] {
+	display: none;
+}
+
+.active[data-content] {
+	display: block;
+}
+.form_register{
+    width: 40%;
+    background-color: gray;
+    padding: 5%;
+    border-radius: 5px;
+    font-family: 'calibri';
+}
+
+.form_register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'calibri';
+    font-size: 20px;
+}
+
+.form_register .botons{
+    width: 100%;
+    border: none;
+    padding: 12px;
+    margin: 16px 0;
+    font-size: 16px;
+
+}
+
+.mostrardatos{
+    width: auto;
+    background-color: gray;
+    padding: 5%;
+    border-radius: 5px;
+    margin-left: 30px;
+    font-family: 'calibri';
+}
+
+.mostrardatos th{
+    padding: 25px;
+}
+
+.contenido{
+    display: flex;
+}
+
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
