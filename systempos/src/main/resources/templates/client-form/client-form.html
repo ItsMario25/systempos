@@ -1,6 +1,6 @@
 
 <form  autocomplete="off"  th:object="${Client}" th:action="@{clientForm}" method="post">
-                    <h4>Ingrese informacion de nuevo cliente</h4>
+                    <h4>Ingrese informacion de nuevo cajero</h4>
                     <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
 					<div class="col-lg-9">
 						<input class="form-control" type="text" th:field="${clientForm.name}" th:disabled="${disableFields}">

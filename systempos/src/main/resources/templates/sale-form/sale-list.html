@@ -1,0 +1,23 @@
+<table id="saleList" class="table table-bordered table-hover table-striped">
+						<thead class="thead-light">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nombre del cliente</th>
+							<th scope="col">Total</th>
+							<th scope="col">Iva</th>
+							<th scope="col">Total Recivido</th>
+							<th scope="col">Total devuelto</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr th:each="sale: ${saleList}">
+							<td th:text="${sale.id}"></td>
+							<td th:text="${sale.nameClient}"></td>
+							<td th:text="${sale.total}"></td>
+							<td th:text="${sale.iva}"></td>
+							<td th:text="${sale.receivedValue}"></td>
+							<td th:text="${sale.returnValue}"></td>
+						</tr>
+						</tbody>
+</table>

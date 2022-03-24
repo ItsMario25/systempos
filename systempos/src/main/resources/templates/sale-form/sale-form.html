@@ -1,0 +1,28 @@
+
+<form  autocomplete="off"  th:object="${Sale}" th:action="@{saleForm}" method="post">
+                    <h4>Ingrese informacion de venta</h4>
+                    <label class="col-lg-3 col-form-label form-control-label">Nombre del cliente</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${saleForm.nameClient}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Total</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${saleForm.total}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Iva</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${saleForm.iva}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Total Recivido</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${saleForm.receivedValue}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Total Devuelto</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${saleForm.returnValue}" th:disabled="${disableFields}">
+					</div>
+					<label></label>
+					<div class="form-group row"><div class="col-lg-12 text-center">
+                    <input type="submit" class="btn btn-primary" value="Registrar">
+					</div></div>
+</form>

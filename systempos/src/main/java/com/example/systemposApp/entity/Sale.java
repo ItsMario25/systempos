@@ -17,13 +17,7 @@ public class Sale {
 	
 	@Column
 	@NotBlank
-	private String CityName;
-	@Column
-	@NotBlank
-	private String discount;
-	@Column
-	@NotBlank
-	private String subtotal;
+	private String nameClient;
 	@Column
 	@NotBlank
 	private String total;
@@ -32,13 +26,47 @@ public class Sale {
 	private String iva;
 	@Column
 	@NotBlank
-	private String typePayment;
-	@Column
-	@NotBlank
 	private String receivedValue;
 	@Column
 	@NotBlank
 	private String returnValue;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getNameClient() {
+		return nameClient;
+	}
+	public void setNameClient(String cityName) {
+		nameClient = cityName;
+	}
+	public String getTotal() {
+		return total;
+	}
+	public void setTotal(String total) {
+		this.total = total;
+	}
+	public String getIva() {
+		return iva;
+	}
+	public void setIva(String iva) {
+		this.iva = iva;
+	}
+	public String getReceivedValue() {
+		return receivedValue;
+	}
+	public void setReceivedValue(String receivedValue) {
+		this.receivedValue = receivedValue;
+	}
+	public String getReturnValue() {
+		return returnValue;
+	}
+	public void setReturnValue(String returnValue) {
+		this.returnValue = returnValue;
+	}
 	
 	
 }
