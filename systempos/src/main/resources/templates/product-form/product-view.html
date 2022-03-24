@@ -62,8 +62,8 @@
               		<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones</a>
               		<div class="dropdown-menu" aria-labelledby="dropdown04">
               			<a class="dropdown-item" href="user-view.html" th:href="@{/userForm}">Usuarios</a>
-                		<a class="dropdown-item" href="#">Mapa del sitio</a>
-                		<a class="dropdown-item" href="#">Administracion</a>
+                		<a class="dropdown-item" href="mapSite.html" th:href="@{/mapSite}">Mapa del sitio</a>
+                		<a class="dropdown-item" href="administracion.html" th:href="@{/administracion}">Administracion</a>
                 		<a class="dropdown-item" href="#">Reportes</a>
                 		<a class="dropdown-item" href="#" th:href="@{/logout}">Desconectar</a>	
              		</div>
@@ -74,28 +74,17 @@
 	  </nav>
 	</section>
 	
-	<div class="contenido">
-                <div class="form_register">
-                    <h4>Registrar producto</h4>
-                    <input class="controls" type="number" name="id" id="id" placeholder="Id producto">
-                    <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
-                    <input class="controls" type="text" name="marca" id="marca" placeholder="Marca del producto">
-                    <input class="controls" type="date" name="fecha_vence" id="fecha_vence" placeholder="Vencimiento">
-                    <input class="controls" type="number" name="stok" id="stok" placeholder="Cantidad">
-                    <input class="botons" type="submit" value="Registrar">
-                </div>
-                <div class="mostrardatos">
-                    <table class="tabladatos">
-                        <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Marca</th>
-                            <th>Vencimiento</th>
-                            <th>Stok</th>
-                        </tr>
-                    </table>
-                </div>
-   	</div>
+	
+			<div class="card">
+				<div class="card-header">
+					<h4>Informacion de productos</h4>
+				</div>
+				<div class="card-body">
+					<div th:include="product-form/product-list.html" th:remove="tag" ></div>
+				</div>
+			</div>
+			
+	
 	
 	<script src="static/js/jquery.min.js"></script>
   	<script src="static/js/popper.js"></script>

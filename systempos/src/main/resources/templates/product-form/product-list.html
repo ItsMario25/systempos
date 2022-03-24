@@ -1,0 +1,21 @@
+<table id="productList" class="table table-bordered table-hover table-striped">
+						<thead class="thead-light">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nombre</th>
+							<th scope="col">Referencia</th>
+							<th scope="col">Precio</th>
+							<th scope="col">Categoria</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr th:each="product: ${productList}">
+							<td th:text="${product.id}"></td>
+							<td th:text="${product.productName}"></td>
+							<td th:text="${product.reference}"></td>
+							<td th:text="${product.price}"></td>
+							<td th:text="${product.category}"></td>
+						</tr>
+						</tbody>
+</table>

@@ -1,0 +1,20 @@
+
+<form  autocomplete="off"  th:object="${Supplier}" th:action="@{supplierForm}" method="post">
+                    <h4>Ingrese informacion de nuevo cliente</h4>
+                    <label class="col-lg-3 col-form-label form-control-label">Nombre - Razon Social</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${supplierForm.name}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Documento</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${supplierForm.document}" th:disabled="${disableFields}">
+					</div>
+					<label class="col-lg-3 col-form-label form-control-label">Numero de telefono</label>
+					<div class="col-lg-9">
+						<input class="form-control" type="text" th:field="${supplierForm.telf}" th:disabled="${disableFields}">
+					</div>
+					<label></label>
+					<div class="form-group row"><div class="col-lg-12 text-center">
+                    <input type="submit" class="btn btn-primary" value="Registrar">
+					</div></div>
+</form>

@@ -3,6 +3,7 @@ package com.example.systemposApp.service;
 import com.example.systemposApp.Exception.UsernameOrldNotFound;
 import com.example.systemposApp.entity.Supplier;
 
+
 public interface SupplierService {
 
 	public Iterable<Supplier> getAllSupplier();

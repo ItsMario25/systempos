@@ -53,6 +53,11 @@ public class UserController {
 		return "index";
 	}
 	
+	@GetMapping({"/mapSite"})
+	public String mapSite() {
+		return "mapSite";
+	}
+	
 	@PostMapping({"/","/login"})
 	public String validCaptcha(@ModelAttribute User user, Model model,
 			@RequestParam("g-recaptcha-response") String captcha

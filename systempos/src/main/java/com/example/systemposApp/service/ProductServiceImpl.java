@@ -12,22 +12,21 @@ public class ProductServiceImpl implements ProductService{
 
 	@Autowired
 	ProductRepository repository;
+	
 	@Override
 	public Iterable<Product> getAllProduct() {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.findAll();
 	}
 
 	@Override
-	public Product createProduct(Product sale) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	public Product createProduct(Product product) throws Exception {
+		product = repository.save(product);
+		return product;
 	}
 
 	@Override
 	public Product getProductById(Long id) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.findById(id).orElseThrow(() -> new UsernameOrldNotFound("El Id del producto no existe."));
 	}
 
 	@Override

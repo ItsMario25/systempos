@@ -1,0 +1,20 @@
+      
+<table id="clientList" class="table table-bordered table-hover table-striped">
+						<thead class="thead-light">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nombre - Razon Social</th>
+							<th scope="col">Documento</th>
+							<th scope="col">Numero telefonico</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr th:each="supplier: ${supplierList}">
+							<td th:text="${supplier.id}"></td>
+							<td th:text="${supplier.name}"></td>
+							<td th:text="${supplier.document}"></td>
+							<td th:text="${supplier.telf}"></td>
+						</tr>
+						</tbody>
+</table>

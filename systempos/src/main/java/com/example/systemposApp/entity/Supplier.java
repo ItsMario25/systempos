@@ -18,10 +18,37 @@ public class Supplier {
 	@Column
 	@NotBlank
 	private String name;
-	
 	@Column
 	@NotBlank
-	private String description;
+	private String document;
+	@Column
+	@NotBlank
+	private String telf;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDocument() {
+		return document;
+	}
+	public void setDocument(String document) {
+		this.document = document;
+	}
+	public String getTelf() {
+		return telf;
+	}
+	public void setTelf(String telf) {
+		this.telf = telf;
+	}
 	
 	
 }

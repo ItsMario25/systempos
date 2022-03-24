@@ -22,11 +22,52 @@ public class Product {
 	@Column
 	@NotBlank
 	private String reference;
+	@Column
+	@NotBlank
+	private String price;
+	@Column
+	@NotBlank
+	private String category;
 	
-	@Size(min=1)
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "product_supplies",
-			joinColumns=@JoinColumn(name="product_id"),
-			inverseJoinColumns=@JoinColumn(name="supplier_id"))
-	private Set<Supplier> supplie;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getReference() {
+		return reference;
+	}
+
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 }
